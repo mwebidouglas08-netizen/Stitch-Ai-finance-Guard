@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Report Fraud | AI Finance Guard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#283044",
+                        "surface-container-low": "#131b2e",
+                        "secondary": "#4ae176",
+                        "on-primary": "#002e6a",
+                        "surface-container": "#171f33",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "tertiary": "#ffb3ad",
+                        "inverse-surface": "#dae2fd",
+                        "on-secondary-fixed": "#002109",
+                        "on-primary-fixed": "#001a42",
+                        "surface-container-lowest": "#060e20",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-variant": "#2d3449",
+                        "surface": "#0b1326",
+                        "secondary-fixed-dim": "#4ae176",
+                        "tertiary-container": "#ff5451",
+                        "surface-dim": "#0b1326",
+                        "on-primary-fixed-variant": "#004395",
+                        "secondary-container": "#00b954",
+                        "tertiary-fixed": "#ffdad7",
+                        "on-tertiary": "#68000a",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-primary-container": "#00285d",
+                        "surface-container-highest": "#2d3449",
+                        "on-error": "#690005",
+                        "background": "#0b1326",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "on-tertiary-fixed": "#410004",
+                        "surface-container-high": "#222a3d",
+                        "on-secondary": "#003915",
+                        "outline-variant": "#424754",
+                        "on-secondary-fixed-variant": "#005321",
+                        "on-background": "#dae2fd",
+                        "surface-tint": "#adc6ff",
+                        "surface-bright": "#31394d",
+                        "on-secondary-container": "#004119",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "primary-container": "#4d8eff",
+                        "on-tertiary-container": "#5c0008",
+                        "on-surface-variant": "#c2c6d6",
+                        "outline": "#8c909f",
+                        "on-surface": "#dae2fd",
+                        "inverse-primary": "#005ac2",
+                        "error-container": "#93000a",
+                        "secondary-fixed": "#6bff8f",
+                        "primary": "#adc6ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(19, 27, 46, 0.6);
+            backdrop-filter: blur(20px);
+        }
+        .security-pulse {
+            position: relative;
+        }
+        .security-pulse::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #4ae176;
+            border-radius: 50%;
+            top: 50%;
+            right: -12px;
+            transform: translateY(-50%);
+            box-shadow: 0 0 10px #4ae176;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#131b2e]/60 backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.06)] flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-white/5 transition-colors scale-95 active:scale-90 text-blue-400">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline font-bold text-lg tracking-tight text-on-surface">Report Fraud</h1>
+</div>
+<div class="flex items-center gap-3">
+<div class="hidden md:flex items-center space-x-6 mr-6">
+<span class="text-slate-400 hover:text-blue-200 transition-all cursor-pointer font-medium text-sm">Vault</span>
+<span class="text-blue-400 font-medium text-sm">Reports</span>
+<span class="text-slate-400 hover:text-blue-200 transition-all cursor-pointer font-medium text-sm">Shield</span>
+<span class="text-slate-400 hover:text-blue-200 transition-all cursor-pointer font-medium text-sm">Settings</span>
+</div>
+<span class="material-symbols-outlined text-blue-400" data-icon="security">security</span>
+</div>
+</header>
+<main class="pt-28 px-6 max-w-2xl mx-auto">
+<!-- Sentinel Pulse Indicator -->
+<div class="mb-12 flex justify-center">
+<div class="bg-surface-container-high px-4 py-1.5 rounded-full flex items-center gap-2 border border-outline-variant/15">
+<span class="text-xs font-medium text-on-surface-variant security-pulse uppercase tracking-widest">AI Guardian Active</span>
+</div>
+</div>
+<section class="space-y-8">
+<header class="space-y-2">
+<h2 class="text-3xl font-headline font-extrabold tracking-tight text-on-surface">Secure Incident Report</h2>
+<p class="text-on-surface-variant font-body">Provide precise details to help our AI track and blacklist fraudulent actors.</p>
+</header>
+<!-- Form Content -->
+<form class="space-y-6">
+<!-- Fraudster's Identity -->
+<div class="space-y-4">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1">Fraudster's Number</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]" data-icon="phone">phone</span>
+</div>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-lg focus:ring-1 focus:ring-primary/40 transition-all text-on-surface placeholder:text-outline/50 shadow-inner" placeholder="+254 7XX XXX XXX" type="tel"/>
+</div>
+</div>
+<!-- Incident Category - Chips -->
+<div class="space-y-4">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1">Incident Category</label>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+<button class="py-3 px-2 rounded-lg bg-primary/10 border border-primary/20 text-primary text-sm font-medium transition-all hover:bg-primary/20" type="button">M-Pesa</button>
+<button class="py-3 px-2 rounded-lg bg-surface-container-high text-on-surface-variant text-sm font-medium transition-all hover:bg-surface-variant" type="button">Bank</button>
+<button class="py-3 px-2 rounded-lg bg-surface-container-high text-on-surface-variant text-sm font-medium transition-all hover:bg-surface-variant" type="button">Phishing</button>
+<button class="py-3 px-2 rounded-lg bg-surface-container-high text-on-surface-variant text-sm font-medium transition-all hover:bg-surface-variant" type="button">Online Shop</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Date Input -->
+<div class="space-y-4">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1">Date of Incident</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]" data-icon="calendar_today">calendar_today</span>
+</div>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-lg focus:ring-1 focus:ring-primary/40 text-on-surface transition-all [color-scheme:dark]" type="date"/>
+</div>
+</div>
+<!-- Amount Input -->
+<div class="space-y-4">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1">Amount Lost (KES)</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[20px]" data-icon="payments">payments</span>
+</div>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-lg focus:ring-1 focus:ring-primary/40 text-on-surface transition-all" placeholder="0.00" type="number"/>
+</div>
+</div>
+</div>
+<!-- Evidence Upload -->
+<div class="space-y-4">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1">Evidence Screenshot</label>
+<div class="relative group cursor-pointer border-2 border-dashed border-outline-variant/30 rounded-lg p-8 transition-all hover:bg-surface-container hover:border-primary/40 flex flex-col items-center justify-center text-center gap-3">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<div class="space-y-1">
+<p class="text-on-surface font-medium">Upload transaction receipts</p>
+<p class="text-xs text-on-surface-variant">JPG, PNG up to 10MB</p>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer" type="file"/>
+</div>
+</div>
+<!-- Narrative -->
+<div class="space-y-4">
+<label class="block text-sm font-semibold text-on-surface-variant ml-1">Description / Narrative</label>
+<textarea class="w-full p-4 bg-surface-container-highest border-none rounded-lg focus:ring-1 focus:ring-primary/40 text-on-surface transition-all resize-none" placeholder="Describe how the incident occurred..." rows="4"></textarea>
+</div>
+<!-- Submit Button -->
+<div class="pt-4">
+<button class="w-full py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-headline font-bold rounded-lg shadow-[0_0_20px_rgba(59,130,246,0.2)] hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+                        Submit Verified Report
+                    </button>
+</div>
+</form>
+<footer class="pt-8 pb-12 border-t border-outline-variant/10 text-center">
+<p class="text-sm text-on-surface-variant italic">Your report helps protect the entire community.</p>
+</footer>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pt-2 pb-6 bg-[#0b1326]/80 backdrop-blur-2xl rounded-t-[1.5rem] shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
+<a class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:text-blue-200 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Vault</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-500/10 text-blue-300 rounded-2xl px-4 py-1.5 shadow-[0_0_10px_rgba(59,130,246,0.2)] scale-110 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="assignment_late">assignment_late</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Reports</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:text-blue-200 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="verified_user">verified_user</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Shield</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 opacity-70 hover:text-blue-200 transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="settings">settings</span>
+<span class="font-inter text-[10px] font-medium tracking-wide">Settings</span>
+</a>
+</nav>
+</body></html>

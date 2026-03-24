@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI Finance Guard - Education</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-fixed": "#001a42",
+                        "tertiary": "#ffb3ad",
+                        "on-tertiary-container": "#5c0008",
+                        "background": "#0b1326",
+                        "inverse-primary": "#005ac2",
+                        "surface-container-low": "#131b2e",
+                        "surface-tint": "#adc6ff",
+                        "secondary-fixed-dim": "#4ae176",
+                        "outline": "#8c909f",
+                        "on-tertiary-fixed": "#410004",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "on-surface": "#dae2fd",
+                        "tertiary-container": "#ff5451",
+                        "surface-container": "#171f33",
+                        "on-secondary-container": "#004119",
+                        "inverse-on-surface": "#283044",
+                        "on-secondary": "#003915",
+                        "on-error": "#690005",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#ffdad7",
+                        "outline-variant": "#424754",
+                        "on-secondary-fixed": "#002109",
+                        "on-tertiary": "#68000a",
+                        "on-primary": "#002e6a",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "surface-variant": "#2d3449",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-primary-fixed-variant": "#004395",
+                        "on-primary-container": "#00285d",
+                        "secondary-fixed": "#6bff8f",
+                        "secondary": "#4ae176",
+                        "surface": "#0b1326",
+                        "error": "#ffb4ab",
+                        "primary-container": "#4d8eff",
+                        "surface-bright": "#31394d",
+                        "secondary-container": "#00b954",
+                        "on-background": "#dae2fd",
+                        "primary": "#adc6ff",
+                        "surface-container-highest": "#2d3449",
+                        "surface-dim": "#0b1326",
+                        "inverse-surface": "#dae2fd",
+                        "surface-container-high": "#222a3d",
+                        "on-surface-variant": "#c2c6d6",
+                        "on-secondary-fixed-variant": "#005321",
+                        "surface-container-lowest": "#060e20",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed": "#d8e2ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(23, 31, 51, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0b1326]/60 backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.06)]">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-400 dark:text-blue-300">shield_lock</span>
+<h1 class="font-manrope font-extrabold tracking-widest uppercase text-sm text-blue-100">AI Finance Guard</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 bg-secondary/10 px-3 py-1 rounded-full ring-1 ring-secondary/20">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-secondary">Sentinel Active</span>
+</div>
+<img alt="Profile" class="w-8 h-8 rounded-full border border-outline-variant/30" data-alt="Close up of a professional user avatar with a clean minimalist aesthetic and soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBujfH0w4xDuDFcF-iWgK8AL8S8IWpnw_tGfJMf8WXYpv2ZXaBmYo42KYepPeGjUBCj7MqsgRF-5FRiXGhJhNep8xIEGjPj_8HN_WaEDpeikD4c9tQ7dIxDZlup4AHL8ejr1VmfClS6ii6BlPt8SrUYvzSp--UGWsBJ661GEboXhrFKkAV3eMeTqncmFbs6RVoig3zZqge7ooQQ-buh9ojWdcAxDi_G73i1a90hvZT4uff9cU9Qtp-5V8nPCIAAPArycPHVCmNKdonx"/>
+</div>
+</div>
+</header>
+<main class="pt-28 pb-32 px-6 max-w-screen-xl mx-auto">
+<!-- Editorial Header -->
+<section class="mb-12">
+<h2 class="font-headline text-5xl font-extrabold tracking-tight mb-4 leading-tight">
+                Stay One Step Ahead
+            </h2>
+<p class="text-on-surface-variant max-w-lg text-lg">
+                Your intelligence is the final line of defense. Master the tactics used by digital predators.
+            </p>
+</section>
+<!-- Categories Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+<div class="group surface-container-low p-6 rounded-lg hover:bg-surface-container transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">account_balance_wallet</span>
+<h3 class="font-headline font-bold text-xl mb-1">M-Pesa Scams</h3>
+<p class="text-on-surface-variant text-sm">Protecting your mobile money vault from social engineering.</p>
+</div>
+<div class="group surface-container-low p-6 rounded-lg hover:bg-surface-container transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">account_balance</span>
+<h3 class="font-headline font-bold text-xl mb-1">Bank Fraud</h3>
+<p class="text-on-surface-variant text-sm">Detecting phishing attempts on your institutional accounts.</p>
+</div>
+<div class="group surface-container-low p-6 rounded-lg hover:bg-surface-container transition-all cursor-pointer">
+<span class="material-symbols-outlined text-primary text-3xl mb-4">shopping_cart</span>
+<h3 class="font-headline font-bold text-xl mb-1">Online Shopping</h3>
+<p class="text-on-surface-variant text-sm">Identifying illegitimate vendors and escrow traps.</p>
+</div>
+</section>
+<!-- Featured Tip Card (The PIN Trick) -->
+<section class="mb-12">
+<div class="relative overflow-hidden rounded-lg surface-container p-8 md:p-12 border border-outline-variant/10 shadow-2xl">
+<div class="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
+<div class="relative z-10 flex flex-col md:flex-row gap-10 items-center">
+<div class="flex-1">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 text-primary text-[10px] font-bold uppercase tracking-widest mb-6">
+                            Featured Intelligence
+                        </div>
+<h3 class="font-headline text-3xl font-bold mb-4">The PIN Trick</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-6">
+                            Legitimate agents will **never** ask for your PIN over the phone or via SMS. Scammers use urgency to make you feel like your account is blocked, then ask for your "identity verification PIN."
+                        </p>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold py-4 px-8 rounded-md transition-transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
+                            Learn the Counters
+                        </button>
+</div>
+<div class="w-full md:w-1/3">
+<div class="aspect-square rounded-lg bg-surface-container-highest flex items-center justify-center relative border border-outline-variant/20 overflow-hidden">
+<img alt="Security Illustration" class="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-overlay" data-alt="Close up of a smartphone screen showing a secure authentication interface with blue glowing data points in a dark setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlM5t43u7io2Lned_uLeWZWi-9aooBSaQWXLBLkI2063MV8EY9EZUWi6k05He3sIj4ceVgnMp-9CG_wqeo-mijoH4JKcYhtG7P6evb6JPnOXlJWnwhsjYyN-4QJUWU9kqhoJRfd_4KKBJzr_H0yYmFZBwjOSks6e5qdAmPH5ED1ayqZbdMQVee50Ak5iYA5z7NyFB127wLX65RGw7nsnQBroBV6nIyvq-EfomEVPw9h3lAt0CsLh0bs1X-isamc4MVnAuZkfPCeWsV"/>
+<span class="material-symbols-outlined text-primary text-7xl relative z-10" style="font-variation-settings: 'FILL' 1;">lock_person</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Common Tactics & Safety Quiz Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+<!-- Common Tactics -->
+<section class="lg:col-span-3">
+<h4 class="font-headline text-2xl font-bold mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary">warning</span>
+                    Common Tactics
+                </h4>
+<div class="space-y-4">
+<div class="surface-container-low p-5 rounded-lg flex items-center gap-5 group hover:bg-surface-container transition-colors">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">sms_failed</span>
+</div>
+<div class="flex-1">
+<h5 class="font-bold text-on-surface">Fake M-Pesa SMS</h5>
+<p class="text-sm text-on-surface-variant">Check the sender ID. Real messages come from M-PESA, not a private number.</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-on-surface transition-colors">chevron_right</span>
+</div>
+<div class="surface-container-low p-5 rounded-lg flex items-center gap-5 group hover:bg-surface-container transition-colors">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">settings_backup_restore</span>
+</div>
+<div class="flex-1">
+<h5 class="font-bold text-on-surface">Wrong Number Reversal Request</h5>
+<p class="text-sm text-on-surface-variant">A caller asks you to send back "accidental" funds. Tell them to use official reversal.</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-on-surface transition-colors">chevron_right</span>
+</div>
+<div class="surface-container-low p-5 rounded-lg flex items-center gap-5 group hover:bg-surface-container transition-colors">
+<div class="w-12 h-12 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">celebration</span>
+</div>
+<div class="flex-1">
+<h5 class="font-bold text-on-surface">Prize Win Scams</h5>
+<p class="text-sm text-on-surface-variant">If you didn't enter a contest, you didn't win. Never pay "shipping" or "taxes" upfront.</p>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-on-surface transition-colors">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Safety Quiz Section -->
+<section class="lg:col-span-2">
+<div class="bg-gradient-to-br from-surface-container to-surface-container-high p-8 rounded-lg border border-primary/10 h-full">
+<div class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary mb-6 shadow-[0_0_15px_rgba(74,225,118,0.2)]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">quiz</span>
+</div>
+<h4 class="font-headline text-2xl font-bold mb-2">Safety Quiz</h4>
+<p class="text-on-surface-variant mb-8">Test your defense readiness. Can you spot the fraud?</p>
+<div class="space-y-4">
+<div class="p-4 rounded-lg bg-surface-container-highest border border-outline-variant/30">
+<p class="text-sm italic text-on-surface mb-3">"You receive a call from 'Head Office' saying your SIM card will be deactivated in 10 minutes unless you verify your identity."</p>
+<div class="grid grid-cols-2 gap-3">
+<button class="py-3 px-4 rounded-md bg-surface-variant text-xs font-bold hover:bg-secondary/20 hover:text-secondary transition-colors">TRUST</button>
+<button class="py-3 px-4 rounded-md bg-surface-variant text-xs font-bold hover:bg-error/20 hover:text-error transition-colors">REJECT</button>
+</div>
+</div>
+<p class="text-[10px] text-center text-outline uppercase tracking-widest">Question 1 of 5</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-[#0b1326]/80 backdrop-blur-2xl shadow-[0_-4px_20px_rgba(0,0,0,0.4)] rounded-t-[1.5rem]">
+<div class="flex justify-around items-center px-4 pb-6 pt-3 max-w-screen-xl mx-auto">
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-blue-200 transition-all active:brightness-125 scale-98" href="{{DATA:SCREEN:SCREEN_2}}">
+<span class="material-symbols-outlined mb-1">dashboard</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider">Dashboard</span>
+</a><a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-blue-200 transition-all active:brightness-125 scale-98" href="{{DATA:SCREEN:SCREEN_15}}">
+<span class="material-symbols-outlined mb-1">qr_code_scanner</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider">Verify</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-blue-200 transition-all active:brightness-125 scale-98" href="{{DATA:SCREEN:SCREEN_8}}">
+<span class="material-symbols-outlined mb-1">history</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider">History</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-500/10 text-blue-300 rounded-2xl px-5 py-2 ring-1 ring-blue-400/20 shadow-[0_0_15px_rgba(59,130,246,0.2)] active:brightness-125 scale-98" href="#">
+<span class="material-symbols-outlined mb-1">school</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider">Education</span>
+</a>
+</div>
+</nav>
+</body></html>

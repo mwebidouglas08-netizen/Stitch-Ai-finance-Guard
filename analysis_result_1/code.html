@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-primary-fixed": "#001a42",
+              "tertiary": "#ffb3ad",
+              "on-tertiary-container": "#5c0008",
+              "background": "#0b1326",
+              "inverse-primary": "#005ac2",
+              "surface-container-low": "#131b2e",
+              "surface-tint": "#adc6ff",
+              "secondary-fixed-dim": "#4ae176",
+              "outline": "#8c909f",
+              "on-tertiary-fixed": "#410004",
+              "on-tertiary-fixed-variant": "#930013",
+              "on-surface": "#dae2fd",
+              "tertiary-container": "#ff5451",
+              "surface-container": "#171f33",
+              "on-secondary-container": "#004119",
+              "inverse-on-surface": "#283044",
+              "on-secondary": "#003915",
+              "on-error": "#690005",
+              "error-container": "#93000a",
+              "tertiary-fixed": "#ffdad7",
+              "outline-variant": "#424754",
+              "on-secondary-fixed": "#002109",
+              "on-tertiary": "#68000a",
+              "on-primary": "#002e6a",
+              "tertiary-fixed-dim": "#ffb3ad",
+              "surface-variant": "#2d3449",
+              "primary-fixed-dim": "#adc6ff",
+              "on-primary-fixed-variant": "#004395",
+              "on-primary-container": "#00285d",
+              "secondary-fixed": "#6bff8f",
+              "secondary": "#4ae176",
+              "surface": "#0b1326",
+              "error": "#ffb4ab",
+              "primary-container": "#4d8eff",
+              "surface-bright": "#31394d",
+              "secondary-container": "#00b954",
+              "on-background": "#dae2fd",
+              "primary": "#adc6ff",
+              "surface-container-highest": "#2d3449",
+              "surface-dim": "#0b1326",
+              "inverse-surface": "#dae2fd",
+              "surface-container-high": "#222a3d",
+              "on-surface-variant": "#c2c6d6",
+              "on-secondary-fixed-variant": "#005321",
+              "surface-container-lowest": "#060e20",
+              "on-error-container": "#ffdad6",
+              "primary-fixed": "#d8e2ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary/30 min-h-screen pb-32">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#0b1326]/60 backdrop-blur-xl shadow-[0_0_15px_rgba(59,130,246,0.06)]">
+<div class="flex items-center justify-between px-6 h-16 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-400 dark:text-blue-300" data-icon="shield_lock">shield_lock</span>
+<span class="text-blue-100 font-extrabold tracking-widest uppercase text-sm">AI Finance Guard</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-blue-500/10 border border-blue-400/20 px-3 py-1 rounded-full flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-[10px] font-bold tracking-tighter text-secondary uppercase">Active Sentinel</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-variant overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="professional portrait of a high-end fintech user in a dark office setting with blue ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy2-Mhit0YbDIbNgseV5Kv-EoOUY2C5Eyh3SSWASbBpYDiTJka8-rJ5cbqH2AG04fBUT7Y2N1-rbAiLX3A4MA_zgUEUGW1A91n7z-RYqWg-dtyBS3wtjxiOL6m9xu-TVvYsrsLS4Lpgei0VpyTFSfL4CVNiuCFOyi7M7avJA_9zSGnq31tS_aghnmc8Ff6JLxIG0GgrLtlDePczYtCcPbKtqJqEdi8Pg_JdyhfXT6v1xZpESUPWxYTaV2hdMvWIfw5mBJPlAZVuGGk"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-24 px-6 max-w-screen-xl mx-auto space-y-8">
+<!-- Hero Section: Risk Gauge -->
+<section class="flex flex-col items-center justify-center pt-8">
+<div class="relative w-64 h-64 flex items-center justify-center">
+<!-- Decorative Outer Ring -->
+<div class="absolute inset-0 rounded-full border-4 border-error/10"></div>
+<!-- Active Glow Gauge -->
+<div class="absolute inset-0 rounded-full border-4 border-t-error border-r-error border-b-error border-l-transparent rotate-[45deg] shadow-[0_0_25px_rgba(255,84,81,0.2)]"></div>
+<!-- Center Content -->
+<div class="flex flex-col items-center justify-center text-center">
+<span class="text-error font-headline font-extrabold text-5xl tracking-tighter">CRITICAL</span>
+<div class="bg-error/20 px-3 py-1 rounded-full mt-2">
+<span class="text-error font-bold text-[10px] uppercase tracking-widest">Threat Detected</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Analysis Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Risk Analysis Card -->
+<div class="bg-surface-container rounded-lg p-6 shadow-xl relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl" data-icon="analytics">analytics</span>
+</div>
+<h3 class="font-headline font-bold text-on-surface-variant text-sm mb-4 uppercase tracking-wider">Risk Analysis</h3>
+<div class="space-y-4">
+<div class="flex items-end gap-2">
+<span class="text-4xl font-headline font-extrabold text-on-surface">98.7%</span>
+<span class="text-on-surface-variant text-xs pb-1">AI Confidence</span>
+</div>
+<div class="flex items-center gap-2 text-error">
+<span class="material-symbols-outlined text-lg" data-icon="warning">warning</span>
+<span class="font-bold">High Risk Detected</span>
+</div>
+</div>
+</div>
+<!-- Suspect Keywords Bento -->
+<div class="bg-surface-container-low rounded-lg p-6 relative overflow-hidden border border-outline-variant/10">
+<h3 class="font-headline font-bold text-on-surface-variant text-sm mb-4 uppercase tracking-wider">Suspect Keywords</h3>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-variant px-4 py-2 rounded-full text-xs font-semibold text-tertiary-container ring-1 ring-tertiary-container/20">Reversal</span>
+<span class="bg-surface-variant px-4 py-2 rounded-full text-xs font-semibold text-tertiary-container ring-1 ring-tertiary-container/20">PIN</span>
+<span class="bg-surface-variant px-4 py-2 rounded-full text-xs font-semibold text-tertiary-container ring-1 ring-tertiary-container/20">Safaricom Agent</span>
+</div>
+</div>
+<!-- Detailed Reason Card (Spans full width) -->
+<div class="md:col-span-2 bg-surface-container-high rounded-lg p-6 flex flex-col gap-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-error/10 flex items-center justify-center text-error">
+<span class="material-symbols-outlined" data-icon="policy">policy</span>
+</div>
+<h3 class="font-headline font-bold text-on-surface">Analysis Reason</h3>
+</div>
+<p class="text-on-surface-variant leading-relaxed">
+                    Message contains known fraudulent patterns <span class="text-tertiary font-semibold">(M-Pesa reversal scam)</span> and the sender number is blacklisted in the global security database.
+                </p>
+</div>
+</div>
+<!-- Protocol Section -->
+<section class="space-y-4">
+<h2 class="font-headline font-extrabold text-xl px-2">Response Protocol</h2>
+<div class="space-y-3">
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-center justify-between group hover:bg-surface-bright transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-error" data-icon="do_not_disturb_on" style="font-variation-settings: 'FILL' 1;">do_not_disturb_on</span>
+<span class="font-bold text-on-surface">Do Not Proceed</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-center justify-between group hover:bg-surface-bright transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="block" style="font-variation-settings: 'FILL' 1;">block</span>
+<span class="font-bold text-on-surface">Block Sender</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg flex items-center justify-between group hover:bg-surface-bright transition-colors">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="report" style="font-variation-settings: 'FILL' 1;">report</span>
+<span class="font-bold text-on-surface">Report to Provider</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Action Buttons -->
+<section class="flex flex-col gap-3 py-4">
+<button class="w-full h-14 bg-gradient-to-r from-error-container to-error rounded-lg font-headline font-extrabold text-on-error-container flex items-center justify-center gap-2 shadow-[0_4px_20px_rgba(147,0,10,0.3)] hover:scale-[1.02] active:scale-95 transition-all">
+<span class="material-symbols-outlined" data-icon="security" style="font-variation-settings: 'FILL' 1;">security</span>
+                Report as Fraud
+            </button>
+<button class="w-full h-14 bg-surface-variant/40 glass-effect rounded-lg font-headline font-bold text-on-surface flex items-center justify-center gap-2 hover:bg-surface-variant/60 transition-colors active:scale-95">
+<span class="material-symbols-outlined" data-icon="refresh">refresh</span>
+                Run New Scan
+            </button>
+</section>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#0b1326]/80 backdrop-blur-2xl rounded-t-[1.5rem] z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
+<!-- Active Tab: Analysis -->
+<div class="flex flex-col items-center justify-center bg-blue-500/10 text-blue-300 rounded-2xl px-5 py-2 ring-1 ring-blue-400/20 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
+<span class="material-symbols-outlined" data-icon="analytics" style="font-variation-settings: 'FILL' 1;">analytics</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">Analysis</span>
+</div>
+<!-- Inactive Tab: History -->
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-blue-200 transition-all active:brightness-125">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">History</span>
+</div>
+<!-- Inactive Tab: Education -->
+<div class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-blue-200 transition-all active:brightness-125">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">Education</span>
+</div>
+</nav>
+</body></html>
