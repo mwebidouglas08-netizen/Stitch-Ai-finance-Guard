@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Safety Score Onboarding</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "outline-variant": "#424754",
+              "on-secondary-fixed-variant": "#005321",
+              "surface-container-lowest": "#060e20",
+              "on-primary-container": "#00285d",
+              "secondary-fixed": "#6bff8f",
+              "on-error-container": "#ffdad6",
+              "secondary": "#4ae176",
+              "primary": "#adc6ff",
+              "on-secondary": "#003915",
+              "tertiary-fixed-dim": "#ffb3ad",
+              "surface": "#0b1326",
+              "tertiary-container": "#ff5451",
+              "surface-container-high": "#222a3d",
+              "on-tertiary-fixed": "#410004",
+              "on-secondary-container": "#004119",
+              "on-primary-fixed-variant": "#004395",
+              "inverse-primary": "#005ac2",
+              "primary-fixed": "#d8e2ff",
+              "surface-container-low": "#131b2e",
+              "surface-bright": "#31394d",
+              "on-surface": "#dae2fd",
+              "on-error": "#690005",
+              "secondary-container": "#00b954",
+              "outline": "#8c909f",
+              "on-background": "#dae2fd",
+              "secondary-fixed-dim": "#4ae176",
+              "primary-fixed-dim": "#adc6ff",
+              "surface-variant": "#2d3449",
+              "on-primary-fixed": "#001a42",
+              "surface-container": "#171f33",
+              "surface-container-highest": "#2d3449",
+              "tertiary-fixed": "#ffdad7",
+              "primary-container": "#4d8eff",
+              "inverse-surface": "#dae2fd",
+              "error-container": "#93000a",
+              "surface-tint": "#adc6ff",
+              "on-surface-variant": "#c2c6d6",
+              "on-secondary-fixed": "#002109",
+              "inverse-on-surface": "#283044",
+              "surface-dim": "#0b1326",
+              "on-tertiary-fixed-variant": "#930013",
+              "error": "#ffb4ab",
+              "tertiary": "#ffb3ad",
+              "background": "#0b1326",
+              "on-tertiary": "#68000a",
+              "on-tertiary-container": "#5c0008",
+              "on-primary": "#002e6a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .bg-glass {
+        background: rgba(11, 19, 38, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .security-pulse {
+        box-shadow: 0 0 15px rgba(74, 225, 118, 0.3);
+      }
+      .score-gradient {
+        background: conic-gradient(from 0deg, #4ae176 85%, transparent 85%);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col overflow-x-hidden">
+<!-- Top App Bar -->
+<header class="fixed top-0 w-full z-50 bg-[#0b1326]/60 backdrop-blur-xl flex justify-between items-center px-6 py-4 shadow-[0_0_15px_rgba(59,130,246,0.06)]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-400" data-icon="shield">shield</span>
+<span class="text-blue-100 font-black tracking-widest text-xl uppercase font-headline">SENTINEL</span>
+</div>
+<button class="text-slate-400 font-manrope font-bold tracking-tight text-lg hover:text-blue-100 transition-colors">Skip</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-6 pt-24 pb-32">
+<!-- Security Pulse Indicator (Editorial Element) -->
+<div class="mb-12 flex items-center gap-3 px-4 py-2 rounded-full bg-surface-container border border-outline-variant/15 security-pulse">
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+<span class="text-on-surface-variant text-xs font-medium tracking-wider uppercase font-label">AI Guardian Active</span>
+</div>
+<!-- Central Gauge Visualization -->
+<div class="relative flex items-center justify-center mb-16">
+<!-- Outer Ambient Glow -->
+<div class="absolute inset-0 bg-secondary/10 blur-[60px] rounded-full scale-125"></div>
+<!-- Circular Gauge -->
+<div class="relative w-72 h-72 rounded-full flex items-center justify-center border-[12px] border-surface-container-high shadow-2xl">
+<!-- Conic Progress Layer (Using pseudo-gradient simulation) -->
+<div class="absolute inset-[-12px] rounded-full score-gradient opacity-80 rotate-[-90deg]"></div>
+<!-- Inner Shield Card -->
+<div class="z-10 bg-surface-container-highest w-60 h-60 rounded-full flex flex-col items-center justify-center shadow-inner border border-outline-variant/20">
+<span class="text-on-surface-variant text-sm font-semibold tracking-[0.2em] uppercase font-label mb-1">Status</span>
+<span class="text-7xl font-extrabold text-on-surface font-headline tracking-tighter">85</span>
+<span class="text-secondary font-bold text-lg font-headline mt-1">PROTECTED</span>
+</div>
+</div>
+<!-- Floating Detail Pins -->
+<div class="absolute -top-4 -right-8 p-4 rounded-xl bg-surface-variant/80 backdrop-blur-md border border-outline-variant/20 shadow-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="verified_user">verified_user</span>
+<span class="text-xs font-medium text-on-surface">Biometrics Active</span>
+</div>
+</div>
+<div class="absolute -bottom-2 -left-10 p-4 rounded-xl bg-surface-variant/80 backdrop-blur-md border border-outline-variant/20 shadow-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="radar">radar</span>
+<span class="text-xs font-medium text-on-surface">Deep Scan Done</span>
+</div>
+</div>
+</div>
+<!-- Typography Cluster -->
+<div class="text-center max-w-sm space-y-4">
+<h1 class="text-4xl font-extrabold text-on-surface font-headline tracking-tight leading-tight">Your Safety Score</h1>
+<p class="text-on-surface-variant text-lg leading-relaxed font-body">
+                Your score reflects your current security posture. Improve it by enabling advanced scans and completing security checkups.
+            </p>
+</div>
+</main>
+<!-- Navigation Shell (Bottom) -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex flex-col items-center gap-8 px-6 py-10 bg-[#0b1326] shadow-2xl shadow-blue-900/20 rounded-t-xl">
+<!-- Progress Dots (Step 3 of 5) -->
+<div class="flex items-center gap-3">
+<div class="w-2 h-1.5 rounded-full bg-slate-700 mx-1"></div>
+<div class="w-2 h-1.5 rounded-full bg-slate-700 mx-1"></div>
+<div class="w-4 h-1.5 rounded-full bg-blue-500/20 text-blue-300 mx-1 flex items-center justify-center">
+<div class="w-full h-full bg-blue-400 rounded-full"></div>
+</div>
+<div class="w-2 h-1.5 rounded-full bg-slate-700 mx-1"></div>
+<div class="w-2 h-1.5 rounded-full bg-slate-700 mx-1"></div>
+</div>
+<!-- Next Button -->
+<button class="w-full max-w-xs py-4 px-8 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold text-lg tracking-tight shadow-lg shadow-primary/20 active:scale-95 transition-all">
+            Next
+        </button>
+</footer>
+<!-- Decorative Background Elements -->
+<div class="fixed top-1/4 -left-20 w-80 h-80 bg-primary/5 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="fixed bottom-1/4 -right-20 w-80 h-80 bg-secondary/5 rounded-full blur-[100px] pointer-events-none"></div>
+</body></html>

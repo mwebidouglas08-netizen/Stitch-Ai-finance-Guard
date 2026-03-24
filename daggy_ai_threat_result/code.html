@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary": "#4ae176",
+              "error": "#ffb4ab",
+              "surface-tint": "#adc6ff",
+              "on-primary-fixed-variant": "#004395",
+              "on-tertiary-fixed-variant": "#930013",
+              "on-surface": "#dae2fd",
+              "primary-fixed": "#d8e2ff",
+              "on-error-container": "#ffdad6",
+              "primary-fixed-dim": "#adc6ff",
+              "on-tertiary-container": "#5c0008",
+              "on-error": "#690005",
+              "surface-container-low": "#131b2e",
+              "secondary-fixed": "#6bff8f",
+              "primary-container": "#4d8eff",
+              "outline": "#8c909f",
+              "on-background": "#dae2fd",
+              "surface-container-lowest": "#060e20",
+              "surface-container-highest": "#2d3449",
+              "on-tertiary-fixed": "#410004",
+              "on-tertiary": "#68000a",
+              "on-primary-container": "#00285d",
+              "background": "#0b1326",
+              "surface-dim": "#0b1326",
+              "surface-container": "#171f33",
+              "tertiary-fixed-dim": "#ffb3ad",
+              "on-secondary-fixed-variant": "#005321",
+              "on-primary": "#002e6a",
+              "surface": "#0b1326",
+              "on-surface-variant": "#c2c6d6",
+              "tertiary-container": "#ff5451",
+              "on-secondary-container": "#004119",
+              "surface-container-high": "#222a3d",
+              "inverse-surface": "#dae2fd",
+              "error-container": "#93000a",
+              "on-secondary": "#003915",
+              "secondary-fixed-dim": "#4ae176",
+              "secondary-container": "#00b954",
+              "on-secondary-fixed": "#002109",
+              "on-primary-fixed": "#001a42",
+              "inverse-primary": "#005ac2",
+              "tertiary": "#ffb3ad",
+              "tertiary-fixed": "#ffdad7",
+              "surface-variant": "#2d3449",
+              "primary": "#adc6ff",
+              "outline-variant": "#424754",
+              "inverse-on-surface": "#283044",
+              "surface-bright": "#31394d"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "manrope": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-panel {
+        background: rgba(45, 52, 73, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen pb-32">
+<!-- Shared Component: TopAppBar -->
+<header class="bg-[#0b1326] dark:bg-[#0b1326] docked full-width top-0 sticky z-50 flat no shadows tonal-layering">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-screen-xl mx-auto">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#4d8eff] dark:text-[#4d8eff]" data-icon="shield_with_heart">shield_with_heart</span>
+<span class="text-xl font-extrabold tracking-tighter text-[#4d8eff] dark:text-[#adc6ff] font-manrope">DAGGY AI FINANCE GUARD</span>
+</div>
+<div class="w-8 h-8 rounded-full overflow-hidden ring-2 ring-primary/20 bg-surface-container-highest flex items-center justify-center">
+<img alt="User profile photo" class="w-full h-full object-cover" data-alt="close-up portrait of a professional man with a friendly expression in clean studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBf0u9_PXm7z1AnX-MwStWIcPzFFX9P6K3xWOTZ_aKDTToOc7KhfnLvh-U_YyxDDOkPO7SozAVmtllIVyf30zpI142HzBJSc_C-h9w-jwEkPewpz4_O7_Buro97niRip-SFLKiFnGyZWsrijCHpjPuXqb2HnKbJGdICYAQ1hWZWpMV0B2DHkWnjW1fKLdtUdri_BapnyMRI4_qC3c0HNlOJxS-8wou48Rny-EYcxv7DhPcKP9_lhNzA1vz1fa6vcXLt-XjwXnwzGpQj"/>
+</div>
+</div>
+</header>
+<main class="pt-8 px-6 max-w-2xl mx-auto space-y-8">
+<!-- Security Pulse (System State) -->
+<div class="flex justify-center">
+<div class="glass-panel px-4 py-1.5 rounded-full flex items-center gap-2 border border-primary/10">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="text-[10px] font-bold tracking-widest uppercase text-secondary">AI Shield Active</span>
+</div>
+</div>
+<!-- Threat Header Section -->
+<section class="text-center space-y-4">
+<div class="inline-flex items-center justify-center w-24 h-24 rounded-full bg-error-container/20 border-2 border-error/30 shadow-[0_0_40px_rgba(255,84,81,0.15)] mb-2">
+<span class="material-symbols-outlined text-5xl text-error" data-icon="warning" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div class="space-y-1">
+<h2 class="font-headline font-extrabold text-4xl tracking-tight text-error uppercase">THREAT DETECTED</h2>
+<p class="text-on-surface-variant font-medium">Risk Analysis Result: <span class="text-error font-bold">CRITICAL</span></p>
+</div>
+</section>
+<!-- Risk Breakdown: Bento Grid Style -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Confidence Score -->
+<div class="surface-container rounded-lg p-6 flex flex-col justify-between min-h-[160px] relative overflow-hidden group">
+<div class="absolute -right-4 -bottom-4 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-9xl text-primary" data-icon="troubleshoot">troubleshoot</span>
+</div>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">AI Confidence</span>
+<div class="space-y-1">
+<div class="text-5xl font-headline font-extrabold text-primary">98.2%</div>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter">Certainty of malicious intent</p>
+</div>
+</div>
+<!-- Scam Type -->
+<div class="surface-container rounded-lg p-6 flex flex-col justify-between min-h-[160px]">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Detected Pattern</span>
+<div class="space-y-3">
+<div class="bg-error/10 text-error px-3 py-1 rounded-full text-sm font-bold inline-block">M-Pesa Phishing</div>
+<p class="text-sm leading-relaxed text-on-surface/80">Impersonation of mobile money service provider to harvest credentials.</p>
+</div>
+</div>
+<!-- Suspect Keywords (Full Width) -->
+<div class="md:col-span-2 surface-container rounded-lg p-6 space-y-4">
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Suspect Keywords Detected</span>
+<div class="flex flex-wrap gap-2">
+<span class="bg-surface-container-highest px-4 py-2 rounded-full border border-error/20 text-error text-sm font-mono font-bold tracking-wider">'PIN'</span>
+<span class="bg-surface-container-highest px-4 py-2 rounded-full border border-error/20 text-error text-sm font-mono font-bold tracking-wider">'Verify'</span>
+<span class="bg-surface-container-highest px-4 py-2 rounded-full border border-error/20 text-error text-sm font-mono font-bold tracking-wider">'Urgent'</span>
+<span class="bg-surface-container-highest px-4 py-2 rounded-full border border-outline-variant/30 text-on-surface/60 text-sm font-mono font-bold tracking-wider">'Suspended'</span>
+<span class="bg-surface-container-highest px-4 py-2 rounded-full border border-outline-variant/30 text-on-surface/60 text-sm font-mono font-bold tracking-wider">'Login'</span>
+</div>
+</div>
+</section>
+<!-- Security Protocol Section -->
+<section class="space-y-6 pt-4">
+<div class="flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="gavel">gavel</span>
+<h3 class="font-headline font-bold text-lg tracking-tight">Security Protocol</h3>
+</div>
+<div class="space-y-3">
+<button class="w-full py-5 rounded-lg bg-gradient-to-r from-error to-error-container text-on-error font-headline font-extrabold text-lg uppercase tracking-widest shadow-[0_8px_30px_rgba(255,84,81,0.3)] active:scale-[0.98] transition-all">
+                    Block &amp; Report
+                </button>
+<button class="w-full py-5 rounded-lg bg-surface-container-high text-on-surface font-headline font-bold text-base tracking-tight hover:bg-surface-bright active:scale-[0.98] transition-all">
+                    Cancel Transaction
+                </button>
+</div>
+</section>
+<!-- Safety Tip Card -->
+<section class="pt-8 pb-12">
+<div class="bg-surface-container-low border border-outline-variant/10 rounded-lg p-5 flex gap-4 items-start">
+<div class="p-2 bg-secondary/10 rounded-lg">
+<span class="material-symbols-outlined text-secondary" data-icon="lightbulb" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<div class="space-y-1">
+<p class="font-bold text-sm text-on-surface">Proactive Safety Tip</p>
+<p class="text-sm text-on-surface-variant leading-snug">Never share your transaction PIN, OTP, or password with anyone, even if they claim to be from official bank support.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Shared Component: BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#0b1326]/60 backdrop-blur-xl rounded-t-xl border-t border-white/5 shadow-[0_-8px_24px_rgba(0,0,0,0.3)]">
+<div class="flex flex-col items-center justify-center text-[#222a3e] opacity-60 px-3 py-1.5 hover:text-[#4d8eff] transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="dashboard">dashboard</span>
+<span class="text-[10px] font-manrope font-medium uppercase tracking-widest">Dashboard</span>
+</div>
+<!-- Active 'Verify' / 'Guard' state -->
+<div class="flex flex-col items-center justify-center text-[#adc6ff] bg-[#4d8eff]/10 rounded-xl px-3 py-1.5 shadow-[0_0_15px_rgba(77,142,255,0.2)] active:scale-110 transition-transform duration-200">
+<span class="material-symbols-outlined mb-1" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="text-[10px] font-manrope font-medium uppercase tracking-widest">Verify</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#222a3e] opacity-60 px-3 py-1.5 hover:text-[#4d8eff] transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="history">history</span>
+<span class="text-[10px] font-manrope font-medium uppercase tracking-widest">History</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#222a3e] opacity-60 px-3 py-1.5 hover:text-[#4d8eff] transition-all">
+<span class="material-symbols-outlined mb-1" data-icon="school">school</span>
+<span class="text-[10px] font-manrope font-medium uppercase tracking-widest">Education</span>
+</div>
+</nav>
+</body></html>

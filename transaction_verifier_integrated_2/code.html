@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sentinel Prime - Verify Transaction</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary": "#003915",
+              "surface-container-highest": "#2d3449",
+              "on-error": "#690005",
+              "on-tertiary-container": "#5c0008",
+              "on-tertiary-fixed": "#410004",
+              "primary": "#adc6ff",
+              "inverse-primary": "#005ac2",
+              "on-primary": "#002e6a",
+              "outline-variant": "#424754",
+              "inverse-surface": "#dae2fd",
+              "primary-container": "#4d8eff",
+              "on-secondary-fixed": "#002109",
+              "error": "#ffb4ab",
+              "surface-dim": "#0b1326",
+              "secondary-fixed": "#6bff8f",
+              "surface-container-low": "#131b2e",
+              "secondary-fixed-dim": "#4ae176",
+              "surface-bright": "#31394d",
+              "on-secondary-fixed-variant": "#005321",
+              "on-surface-variant": "#c2c6d6",
+              "background": "#0b1326",
+              "error-container": "#93000a",
+              "surface": "#0b1326",
+              "on-surface": "#dae2fd",
+              "inverse-on-surface": "#283044",
+              "on-tertiary": "#68000a",
+              "on-background": "#dae2fd",
+              "secondary": "#4ae176",
+              "tertiary-fixed-dim": "#ffb3ad",
+              "tertiary-fixed": "#ffdad7",
+              "surface-container-lowest": "#060e20",
+              "on-primary-container": "#00285d",
+              "tertiary": "#ffb3ad",
+              "on-secondary-container": "#004119",
+              "surface-container": "#171f33",
+              "secondary-container": "#00b954",
+              "primary-fixed-dim": "#adc6ff",
+              "on-tertiary-fixed-variant": "#930013",
+              "surface-container-high": "#222a3d",
+              "on-primary-fixed-variant": "#004395",
+              "surface-variant": "#2d3449",
+              "outline": "#8c909f",
+              "surface-tint": "#adc6ff",
+              "on-error-container": "#ffdad6",
+              "primary-fixed": "#d8e2ff",
+              "on-primary-fixed": "#001a42",
+              "tertiary-container": "#ff5451"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(23, 31, 51, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .security-pulse {
+        box-shadow: 0 0 15px rgba(74, 225, 118, 0.3);
+      }
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body min-h-screen pb-32">
+<!-- TopAppBar consistent with Dashboard -->
+<header class="fixed top-0 w-full z-50 bg-[#0b1326]/60 backdrop-blur-xl flex justify-between items-center px-6 h-16 shadow-[0_0_15px_rgba(59,130,246,0.06)]">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-highest border border-outline-variant/30">
+<img alt="Profile" data-alt="a professional portrait of a tech-savvy user in a high-tech digital environment with soft blue lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH0q5WQbr2bBeUlzJh1fCXpBCcRH-C3AJrndhcwF5mD91fpZU-DZAdr7s7fp1JVHGyaJdIsihrsLKN0e07V7zZQFbbS42dgdJSXTtmp57HngFixHIXcOfL6R514Wf1MJ8kovUX51l11A2fslZBcC0ez8Y5E_raF6-0yjrgzfxlFQtDCHqFcQX2rZ6a-AagqaO514Ba4QzvR3LgLkecME4nH5Puv9tPMBmDTrwHqmspQ2xyD4UdSsat2K5VX9UcQJvDdSivXYyxVy6c"/>
+</div>
+<span class="text-sm font-extrabold tracking-widest uppercase text-blue-100 font-headline">Sentinel Prime</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-400/20">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-widest font-label">AI Shield Active</span>
+</div>
+<span class="material-symbols-outlined text-blue-400 cursor-pointer hover:opacity-80 transition-opacity">security_update_good</span>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-md mx-auto">
+<!-- Section Header -->
+<section class="mb-8 mt-4">
+<h1 class="text-3xl font-extrabold font-headline tracking-tight mb-2">Verify Transaction</h1>
+<p class="text-on-surface-variant text-sm leading-relaxed">Let our AI analyze incoming SMS patterns to protect your funds from sophisticated fraud.</p>
+</section>
+<!-- Input Section -->
+<section class="space-y-4 mb-10">
+<div class="grid grid-cols-2 gap-4">
+<!-- Sender Phone -->
+<div class="col-span-1">
+<label class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-2 ml-1">Sender</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary/60 text-lg">phone_iphone</span>
+<input class="w-full bg-surface-container-highest border-none rounded-lg py-4 pl-12 pr-4 text-sm focus:ring-1 focus:ring-primary/40 focus:bg-surface-bright transition-all placeholder:text-outline" placeholder="Phone #" type="text" value="0712 345 678"/>
+</div>
+<!-- Clearly visible alert for a known scam number -->
+<div class="mt-2 px-3 py-3 bg-error/15 border border-error/30 rounded-lg flex items-start gap-2 shadow-[0_0_15px_rgba(255,84,81,0.1)]">
+<span class="material-symbols-outlined text-error text-xl shrink-0" style="font-variation-settings: 'FILL' 1;">warning</span>
+<div>
+<p class="text-[10px] font-extrabold text-error uppercase tracking-tight leading-tight">
+                                HIGH RISK: 15+ Fraud Reports Detected. 
+                            </p>
+<a class="text-[9px] font-bold text-error underline decoration-error/40 block mt-1" href="#">[View Full Security Report]</a>
+</div>
+</div>
+</div>
+<!-- Amount -->
+<div class="col-span-1">
+<label class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-2 ml-1">Amount</label>
+<div class="relative">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-primary font-bold text-xs">KES</span>
+<input class="w-full bg-surface-container-highest border-none rounded-lg py-4 pl-12 pr-4 text-sm focus:ring-1 focus:ring-primary/40 focus:bg-surface-bright transition-all placeholder:text-outline" placeholder="0.00" type="number"/>
+</div>
+</div>
+</div>
+<!-- Paste SMS Content -->
+<div>
+<label class="block text-[10px] font-bold text-on-surface-variant uppercase tracking-widest mb-2 ml-1">SMS Content</label>
+<div class="relative">
+<textarea class="w-full bg-surface-container-highest border-none rounded-lg p-5 text-sm focus:ring-1 focus:ring-primary/40 focus:bg-surface-bright transition-all placeholder:text-outline leading-relaxed resize-none" placeholder="Paste the full SMS message here..." rows="5"></textarea>
+<div class="absolute right-4 bottom-4">
+<span class="material-symbols-outlined text-primary/40">content_paste</span>
+</div>
+</div>
+</div>
+<!-- Run AI Security Scan Button leading to SCREEN_32 -->
+<a class="w-full py-5 rounded-lg bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold font-headline tracking-wide shadow-[0_8px_25px_rgba(77,142,255,0.25)] flex items-center justify-center gap-3 active:scale-95 duration-200 group no-underline" href="{{DATA:SCREEN:SCREEN_32}}">
+<span class="material-symbols-outlined group-hover:rotate-12 transition-transform" data-weight="fill">shield_with_heart</span>
+                Run AI Security Scan
+            </a>
+</section>
+<!-- History Section -->
+<section class="mb-12">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-lg font-bold font-headline">Recent Verifications</h2>
+<span class="text-xs font-semibold text-primary">View All</span>
+</div>
+<div class="space-y-3">
+<!-- Safe Transaction -->
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between group active:scale-[0.98] transition-all">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-secondary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">M-PESA: P529X...</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold">Verified Safe • 2m ago</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-on-surface">KES 4,500</p>
+<span class="material-symbols-outlined text-outline-variant text-sm">chevron_right</span>
+</div>
+</div>
+<!-- Warning Transaction -->
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between group active:scale-[0.98] transition-all border border-error/10">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-error/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-error" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Unknown Sender</p>
+<p class="text-[10px] text-error uppercase tracking-wider font-bold">High Risk Alert</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-on-surface">KES 12,800</p>
+<span class="material-symbols-outlined text-outline-variant text-sm">chevron_right</span>
+</div>
+</div>
+<!-- Neutral Transaction -->
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between group active:scale-[0.98] transition-all">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-tertiary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">info</span>
+</div>
+<div>
+<p class="text-sm font-bold text-on-surface">Paybill 888123</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold">Unrecognized • 1h ago</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold text-on-surface">KES 150</p>
+<span class="material-symbols-outlined text-outline-variant text-sm">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Educational Footer -->
+<footer class="pb-10">
+<div class="bg-primary/5 rounded-lg p-6 border border-primary/10 relative overflow-hidden">
+<div class="absolute top-0 right-0 opacity-10">
+<span class="material-symbols-outlined text-6xl translate-x-4 -translate-y-4">school</span>
+</div>
+<div class="flex gap-4 items-start relative z-10">
+<span class="material-symbols-outlined text-primary mt-0.5">lightbulb</span>
+<p class="text-xs text-on-surface-variant leading-relaxed font-medium italic">
+                        "Genuine providers like <span class="text-primary font-bold">Safaricom</span> will never ask for your <span class="text-primary font-bold">PIN</span> or personal information via SMS. Always run a scan if you feel suspicious."
+                    </p>
+</div>
+</div>
+</footer>
+</main>
+<!-- BottomNavBar consistent with Dashboard/Analysis -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-[#0b1326]/80 backdrop-blur-2xl rounded-t-[1.5rem] z-50 shadow-[0_-4px_20px_rgba(0,0,0,0.4)]">
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-blue-200 transition-all active:brightness-125" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-500/10 text-blue-300 rounded-2xl px-5 py-2 ring-1 ring-blue-400/20 shadow-[0_0_15px_rgba(59,130,246,0.2)]" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">Verify</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-blue-200 transition-all active:brightness-125" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">History</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 hover:text-blue-200 transition-all active:brightness-125" href="#">
+<span class="material-symbols-outlined">school</span>
+<span class="font-inter text-[10px] font-semibold uppercase tracking-wider mt-1">Education</span>
+</a>
+</nav>
+</body></html>

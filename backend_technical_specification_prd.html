@@ -1,0 +1,80 @@
+# AI Finance Guard: Backend Architecture & API Specification
+
+## 1. Technology Stack Recommendation
+*   **Language:** Python (FastAPI) or Node.js (TypeScript/Express)
+*   **Database:** PostgreSQL (Relational data) + Redis (Fast caching for blacklists)
+*   **AI Engine:** Python-based NLP (NLTK/SpaCy) or integration with OpenAI/Gemini API for pattern recognition.
+*   **Authentication:** JWT with MFA (Multi-Factor Authentication)
+*   **Infrastructure:** AWS (Lambda/EC2) or Supabase (Backend-as-a-Service)
+
+---
+
+## 2. Core API Endpoints
+
+### A. Transaction Verification
+*   **POST** `/api/v1/verify`
+    *   **Description:** Analyzes a transaction message for fraud patterns.
+    *   **Input:** `{ phone_number: string, amount: decimal, message_content: string }`
+    *   **Output:** `{ risk_level: "LOW" | "MEDIUM" | "HIGH", confidence: float, reason: string, suspect_keywords: string[] }`
+
+### B. Fraud Reporting
+*   **POST** `/api/v1/reports`
+    *   **Description:** Submits a new fraud report from a user.
+    *   **Input:** `{ fraudster_number: string, category: string, evidence_url: string, description: string }`
+    *   **Output:** `{ report_id: uuid, status: "PENDING" }`
+
+### C. Blacklist Management
+*   **GET** `/api/v1/blacklist`
+    *   **Description:** Retrieves the list of globally and personally blocked numbers.
+*   **POST** `/api/v1/blacklist/add`
+    *   **Description:** Manually adds a number to the user's personal blacklist.
+
+### D. Admin Panel
+*   **GET** `/api/v1/admin/pending-reports`
+    *   **Description:** Lists all user reports awaiting manual verification.
+*   **PATCH** `/api/v1/admin/reports/{id}/verify`
+    *   **Description:** Admin action to confirm a report and move the number to the Global Blacklist.
+
+---
+
+## 3. Database Schema (Simplified)
+
+### Users Table
+- `id`: UUID (Primary Key)
+- `phone_number`: String (Unique)
+- `name`: String
+- `reputation_score`: Integer
+- `is_admin`: Boolean
+
+### Reports Table
+- `id`: UUID
+- `reporter_id`: UUID (Foreign Key)
+- `fraud_number`: String
+- `category`: String (M-Pesa, Bank, Phishing)
+- `evidence_path`: String (S3 URL)
+- `status`: Enum (PENDING, VERIFIED, REJECTED)
+- `ai_risk_score`: Float
+- `created_at`: Timestamp
+
+### Blacklist Table
+- `id`: UUID
+- `phone_number`: String (Index)
+- `source`: Enum (AI_DETECTED, USER_REPORTED, ADMIN_VERIFIED)
+- `risk_weight`: Integer
+- `last_active`: Timestamp
+
+---
+
+## 4. Security & Compliance
+1.  **Data Encryption:** All PII (Personally Identifiable Information) like phone numbers must be hashed or encrypted at rest.
+2.  **Rate Limiting:** Implement strict rate limiting on the `/verify` endpoint to prevent scrapers from probing the AI engine.
+3.  **Audit Logs:** Every admin action (verifying/rejecting reports) must be logged for accountability.
+4.  **Input Sanitization:** Prevent SQL injection and XSS by sanitizing all incoming message content strings.
+
+---
+
+## 5. Implementation Roadmap
+1.  **Phase 1:** Set up the database and authentication (Sign up/Login).
+2.  **Phase 2:** Integrate the AI logic for basic keyword matching and risk scoring.
+3.  **Phase 3:** Build the reporting and admin flow for community-driven data.
+4.  **Phase 4:** Scale with high-velocity caching for the Blacklist engine.

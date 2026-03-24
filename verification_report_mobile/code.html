@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daggy AI Finance Guard - Verification Report</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "background": "#0b1326",
+              "on-tertiary-fixed": "#410004",
+              "on-tertiary": "#68000a",
+              "on-primary-container": "#00285d",
+              "surface-dim": "#0b1326",
+              "surface-container": "#171f33",
+              "on-primary": "#002e6a",
+              "tertiary-fixed-dim": "#ffb3ad",
+              "on-secondary-fixed-variant": "#005321",
+              "surface": "#0b1326",
+              "on-surface-variant": "#c2c6d6",
+              "tertiary-container": "#ff5451",
+              "surface-container-high": "#222a3d",
+              "inverse-surface": "#dae2fd",
+              "on-secondary-container": "#004119",
+              "error-container": "#93000a",
+              "on-secondary": "#003915",
+              "on-primary-fixed": "#001a42",
+              "inverse-primary": "#005ac2",
+              "secondary-fixed-dim": "#4ae176",
+              "secondary-container": "#00b954",
+              "on-secondary-fixed": "#002109",
+              "tertiary": "#ffb3ad",
+              "tertiary-fixed": "#ffdad7",
+              "surface-variant": "#2d3449",
+              "primary": "#adc6ff",
+              "outline-variant": "#424754",
+              "inverse-on-surface": "#283044",
+              "surface-bright": "#31394d",
+              "secondary": "#4ae176",
+              "error": "#ffb4ab",
+              "surface-tint": "#adc6ff",
+              "on-primary-fixed-variant": "#004395",
+              "on-tertiary-fixed-variant": "#930013",
+              "on-surface": "#dae2fd",
+              "primary-fixed": "#d8e2ff",
+              "on-error-container": "#ffdad6",
+              "primary-fixed-dim": "#adc6ff",
+              "on-tertiary-container": "#5c0008",
+              "on-error": "#690005",
+              "surface-container-low": "#131b2e",
+              "outline": "#8c909f",
+              "secondary-fixed": "#6bff8f",
+              "primary-container": "#4d8eff",
+              "on-background": "#dae2fd",
+              "surface-container-lowest": "#060e20",
+              "surface-container-highest": "#2d3449"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-effect {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      body {
+        background-color: #0b1326;
+        color: #dae2fd;
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#0b1326]/60 backdrop-blur-xl flex justify-between items-center px-6 h-16 w-full shadow-[0_0_15px_rgba(59,130,246,0.06)]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-blue-400">shield_lock</span>
+<span class="font-['Manrope'] tracking-widest uppercase font-bold text-sm text-blue-400">SOVEREIGN</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="hover:bg-blue-400/10 transition-colors p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-slate-400">share</span>
+</button>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-2xl mx-auto space-y-8">
+<!-- Security Pulse Component -->
+<div class="flex justify-center">
+<div class="bg-surface-variant/60 glass-effect px-4 py-1.5 rounded-full flex items-center gap-2 shadow-[0_0_15px_rgba(74,225,118,0.15)]">
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+<span class="text-[10px] font-bold tracking-widest text-secondary uppercase font-headline">AI Sentinel Active</span>
+</div>
+</div>
+<!-- Report Header -->
+<section class="space-y-2 text-center">
+<h1 class="font-headline font-extrabold text-3xl tracking-tight text-on-surface">Official Security Report</h1>
+<div class="flex flex-col items-center gap-1">
+<span class="text-xs font-mono text-on-surface-variant tracking-wider">ID: #DAG-2024-88921</span>
+<span class="text-[11px] text-outline uppercase tracking-widest">Generated: Oct 24, 2024 • 14:32 UTC</span>
+</div>
+</section>
+<!-- Scan Summary & Status -->
+<section class="relative">
+<div class="bg-surface-container rounded-lg p-8 text-center border-t-4 border-tertiary shadow-xl overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
+<span class="material-symbols-outlined text-9xl">gpp_maybe</span>
+</div>
+<div class="inline-flex items-center justify-center w-20 h-20 rounded-full bg-tertiary/10 mb-4 ring-1 ring-tertiary/30">
+<span class="material-symbols-outlined text-4xl text-tertiary" style="font-variation-settings: 'FILL' 1;">warning</span>
+</div>
+<h2 class="text-2xl font-headline font-bold text-tertiary mb-1">CRITICAL RISK</h2>
+<p class="text-on-surface-variant text-sm font-medium">Potential Financial Fraud Detected</p>
+<div class="mt-6 grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 rounded-md">
+<span class="block text-[10px] text-outline uppercase font-bold mb-1">Risk Score</span>
+<span class="text-xl font-headline font-extrabold text-tertiary">94/100</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-md">
+<span class="block text-[10px] text-outline uppercase font-bold mb-1">Certainty</span>
+<span class="text-xl font-headline font-extrabold text-on-surface">High</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Entity Details -->
+<section class="bg-surface-container-low rounded-lg p-6 space-y-4 shadow-sm">
+<h3 class="font-headline font-bold text-sm text-primary flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">contact_page</span>
+                ENTITY DETAILS
+            </h3>
+<div class="space-y-3">
+<div class="flex justify-between items-center py-2 border-b border-outline-variant/10">
+<span class="text-on-surface-variant text-sm">Source Number</span>
+<span class="font-mono text-on-surface font-bold">+1 (555) 012-9932</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-outline-variant/10">
+<span class="text-on-surface-variant text-sm">Attempted Amount</span>
+<span class="font-headline text-on-surface font-black">$4,250.00 USD</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="text-on-surface-variant text-sm">Platform</span>
+<span class="text-on-surface font-medium">SMS / iMessage</span>
+</div>
+</div>
+</section>
+<!-- AI Findings (Bento Style) -->
+<section class="space-y-4">
+<h3 class="font-headline font-bold text-sm text-primary flex items-center gap-2 px-1">
+<span class="material-symbols-outlined text-lg">psychology</span>
+                AI ANALYSIS FINDINGS
+            </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+<div class="bg-surface-container p-5 rounded-lg border-l-4 border-tertiary">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary">person_cancel</span>
+<div>
+<p class="font-bold text-sm text-on-surface">Impersonation Detected</p>
+<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">Sender mimics official bank communication patterns but fails SPF/DKIM verification.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-5 rounded-lg border-l-4 border-tertiary">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary">key_visualizer</span>
+<div>
+<p class="font-bold text-sm text-on-surface">Suspicious Keywords</p>
+<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">High frequency of urgency-based tokens: "immediate", "suspension", "unauthorized".</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 bg-surface-container p-5 rounded-lg border-l-4 border-primary">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">language</span>
+<div>
+<p class="font-bold text-sm text-on-surface">Malicious URL Redirect</p>
+<p class="text-xs text-on-surface-variant mt-1 leading-relaxed">The link "bank-secure-auth.net" resolves to a known phishing server in a high-risk jurisdiction.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Evidence -->
+<section class="bg-surface-container-highest rounded-lg p-6 space-y-4 border border-outline-variant/20">
+<div class="flex justify-between items-center">
+<h3 class="font-headline font-bold text-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">description</span>
+                    ORIGINAL MESSAGE SNAPSHOT
+                </h3>
+<span class="text-[10px] bg-background/50 px-2 py-0.5 rounded text-outline">ENCRYPTED LOG</span>
+</div>
+<div class="bg-background/80 rounded p-4 font-mono text-xs text-on-surface-variant leading-relaxed">
+                "URGENT: Your Daggy Account #8821 has been flagged for suspicious activity. A withdrawal of $4,250.00 is pending. If this was not you, visit https://bank-secure-auth.net/verify-now immediately to block the transaction."
+            </div>
+</section>
+<!-- Official Actions -->
+<section class="grid grid-cols-1 gap-3 pb-8">
+<button class="bg-primary hover:bg-primary-container text-on-primary font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">download</span>
+                Download Official PDF Report
+            </button>
+<div class="grid grid-cols-2 gap-3">
+<button class="bg-surface-container-high hover:bg-surface-bright text-on-surface font-semibold py-3 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95">
+<span class="material-symbols-outlined text-lg">account_balance</span>
+                    Alert Bank
+                </button>
+<button class="bg-on-tertiary-fixed hover:bg-on-tertiary text-tertiary-fixed font-semibold py-3 rounded-lg flex items-center justify-center gap-2 transition-all active:scale-95">
+<span class="material-symbols-outlined text-lg">block</span>
+                    Block Number
+                </button>
+</div>
+</section>
+</main>
+<!-- Reports active in BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#0b1326]/80 backdrop-blur-2xl rounded-t-[1.5rem] shadow-[0_-8px_30px_rgb(0,0,0,0.5)]">
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-blue-200 transition-all duration-300 ease-out">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="font-['Inter'] font-medium text-[10px]">Vault</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-blue-200 transition-all duration-300 ease-out">
+<span class="material-symbols-outlined">gpp_good</span>
+<span class="font-['Inter'] font-medium text-[10px]">Shield</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-blue-500/20 text-blue-300 rounded-full px-4 py-1 shadow-[0_0_10px_rgba(59,130,246,0.3)] scale-110 transition-all duration-300 ease-out">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-['Inter'] font-medium text-[10px]">Reports</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 hover:text-blue-200 transition-all duration-300 ease-out">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-['Inter'] font-medium text-[10px]">Settings</span>
+</div>
+</nav>
+</body></html>

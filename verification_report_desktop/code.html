@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Daggy AI Finance Guard | Verification Report</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "background": "#0b1326",
+                        "on-tertiary-fixed": "#410004",
+                        "on-tertiary": "#68000a",
+                        "on-primary-container": "#00285d",
+                        "surface-dim": "#0b1326",
+                        "surface-container": "#171f33",
+                        "on-primary": "#002e6a",
+                        "tertiary-fixed-dim": "#ffb3ad",
+                        "on-secondary-fixed-variant": "#005321",
+                        "surface": "#0b1326",
+                        "on-surface-variant": "#c2c6d6",
+                        "tertiary-container": "#ff5451",
+                        "surface-container-high": "#222a3d",
+                        "inverse-surface": "#dae2fd",
+                        "on-secondary-container": "#004119",
+                        "error-container": "#93000a",
+                        "on-secondary": "#003915",
+                        "on-primary-fixed": "#001a42",
+                        "inverse-primary": "#005ac2",
+                        "secondary-fixed-dim": "#4ae176",
+                        "secondary-container": "#00b954",
+                        "on-secondary-fixed": "#002109",
+                        "tertiary": "#ffb3ad",
+                        "tertiary-fixed": "#ffdad7",
+                        "surface-variant": "#2d3449",
+                        "primary": "#adc6ff",
+                        "outline-variant": "#424754",
+                        "inverse-on-surface": "#283044",
+                        "surface-bright": "#31394d",
+                        "secondary": "#4ae176",
+                        "error": "#ffb4ab",
+                        "surface-tint": "#adc6ff",
+                        "on-primary-fixed-variant": "#004395",
+                        "on-tertiary-fixed-variant": "#930013",
+                        "on-surface": "#dae2fd",
+                        "primary-fixed": "#d8e2ff",
+                        "on-error-container": "#ffdad6",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-tertiary-container": "#5c0008",
+                        "on-error": "#690005",
+                        "surface-container-low": "#131b2e",
+                        "outline": "#8c909f",
+                        "secondary-fixed": "#6bff8f",
+                        "primary-container": "#4d8eff",
+                        "on-background": "#dae2fd",
+                        "surface-container-lowest": "#060e20",
+                        "surface-container-highest": "#2d3449"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(45, 52, 73, 0.4);
+            backdrop-filter: blur(20px);
+        }
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+<body class="flex min-h-screen">
+<!-- SideNavBar (Authority: JSON & Design System) -->
+<aside class="fixed left-0 top-0 h-full w-72 bg-[#131b2e] shadow-2xl z-40 hidden md:flex flex-col pt-24 pb-8 space-y-2 font-manrope text-sm font-medium">
+<div class="px-8 mb-8">
+<div class="flex items-center space-x-3 mb-2">
+<div class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_10px_#4ae176]"></div>
+<span class="text-on-surface-variant text-xs uppercase tracking-widest">Verification Engine</span>
+</div>
+<p class="text-on-surface font-bold text-lg">Active Monitoring</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="text-[#c2c6d6] mx-4 py-3 px-6 hover:text-[#dae2fd] hover:bg-[#171f33] transition-colors flex items-center space-x-4" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Overview</span>
+</a>
+<a class="bg-[#222a3d] text-[#adc6ff] rounded-full mx-4 py-3 px-6 shadow-[0_0_15px_rgba(173,198,255,0.1)] flex items-center space-x-4" href="#">
+<span class="material-symbols-outlined" data-icon="security">security</span>
+<span>Threat Analysis</span>
+</a>
+<a class="text-[#c2c6d6] mx-4 py-3 px-6 hover:text-[#dae2fd] hover:bg-[#171f33] transition-colors flex items-center space-x-4" href="#">
+<span class="material-symbols-outlined" data-icon="hub">hub</span>
+<span>Network Logs</span>
+</a>
+<a class="text-[#c2c6d6] mx-4 py-3 px-6 hover:text-[#dae2fd] hover:bg-[#171f33] transition-colors flex items-center space-x-4" href="#">
+<span class="material-symbols-outlined" data-icon="enhanced_encryption">enhanced_encryption</span>
+<span>Identity Vault</span>
+</a>
+<a class="text-[#c2c6d6] mx-4 py-3 px-6 hover:text-[#dae2fd] hover:bg-[#171f33] transition-colors flex items-center space-x-4" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+</nav>
+<div class="mt-auto px-4 space-y-1">
+<a class="text-[#c2c6d6] py-3 px-6 hover:text-[#dae2fd] flex items-center space-x-4" href="#">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+<span>Support</span>
+</a>
+<a class="text-[#c2c6d6] py-3 px-6 hover:text-[#dae2fd] flex items-center space-x-4" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span>Sign Out</span>
+</a>
+<div class="pt-6 px-4">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-bold py-3 rounded-full active:scale-95 transition-transform">
+                    Export Full Report
+                </button>
+</div>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-72 bg-surface min-h-screen">
+<!-- TopAppBar (Authority: JSON) -->
+<header class="fixed top-0 right-0 left-0 md:left-72 z-50 bg-[#0b1326]/60 backdrop-blur-xl h-20 flex justify-between items-center px-8 shadow-[0_0_15px_rgba(59,130,246,0.06)]">
+<div class="flex items-center space-x-6">
+<span class="text-xl font-bold text-[#dae2fd] tracking-widest uppercase font-manrope">Sovereign Sentinel</span>
+<div class="h-6 w-px bg-outline-variant/30 hidden lg:block"></div>
+<div class="hidden lg:flex items-center bg-[#131b2e] px-4 py-2 rounded-full border border-outline-variant/20">
+<span class="material-symbols-outlined text-primary text-sm mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none text-sm focus:ring-0 text-on-surface placeholder-on-surface-variant w-48" placeholder="Audit ID #8829-X" type="text"/>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="flex space-x-1 mr-4">
+<button class="p-2 text-[#c2c6d6] hover:text-[#dae2fd] hover:bg-[#222a3d]/50 rounded-full transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="file_download">file_download</span>
+</button>
+<button class="p-2 text-[#c2c6d6] hover:text-[#dae2fd] hover:bg-[#222a3d]/50 rounded-full transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="print">print</span>
+</button>
+<button class="p-2 text-[#c2c6d6] hover:text-[#dae2fd] hover:bg-[#222a3d]/50 rounded-full transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</button>
+</div>
+<img alt="Security Officer Profile" class="w-10 h-10 rounded-full border-2 border-primary/20" data-alt="Professional security officer portrait, close-up, focused expression, cinematic office lighting with subtle blue highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCd2IHU6UyZoGeQA0n6oxrt5_b7w8yHCig92JkNEtDpCaFX_Jxao__KmqYf8pbTmh4IFhaKuYO2JFpoMUahaZ1ZcdBTnKneUlkbANq4woj9TwR1H69fXDHiapz2Ra43mLq5d8M9_bBgWzHJwXsYMhbfdTc-PZ3eyHRQRYEQgIIw7eShrm_S3xQeAXZojbFzhRdeJEuMoCNy8QJkNwxDbb5BL5OWoWMmMFA0pBPhhjpB3Lc_EmvXXhc2LI5op13nXbqQyWBERygK0nx"/>
+</div>
+</header>
+<!-- Document Body -->
+<div class="pt-32 pb-20 px-8 max-w-7xl mx-auto space-y-12">
+<!-- Formal Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start border-b border-outline-variant/10 pb-8">
+<div>
+<div class="flex items-center space-x-3 mb-4">
+<div class="bg-primary-container p-2 rounded-lg">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="shield_lock" style="font-variation-settings: 'FILL' 1;">shield_lock</span>
+</div>
+<span class="font-headline font-extrabold text-2xl tracking-tighter text-on-surface">DAGGY AI <span class="text-primary">FINANCE GUARD</span></span>
+</div>
+<h1 class="text-4xl font-headline font-extrabold text-on-surface mb-2">Official Verification Audit</h1>
+<div class="flex space-x-6 text-on-surface-variant text-sm font-label">
+<div class="flex items-center"><span class="material-symbols-outlined text-xs mr-2" data-icon="calendar_today">calendar_today</span> Oct 24, 2023</div>
+<div class="flex items-center"><span class="material-symbols-outlined text-xs mr-2" data-icon="fingerprint">fingerprint</span> Report ID: <span class="text-on-surface ml-1">SHA-256: 8f2a...e91c</span></div>
+<div class="flex items-center"><span class="material-symbols-outlined text-xs mr-2" data-icon="gavel">gavel</span> Status: <span class="text-tertiary ml-1 font-bold">LEGALLY BINDING</span></div>
+</div>
+</div>
+<div class="mt-6 md:mt-0 glass-panel p-6 rounded-xl border border-outline-variant/15 flex flex-col items-center">
+<div class="relative w-24 h-24 mb-2">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-high" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-tertiary" cx="48" cy="48" fill="transparent" r="40" stroke="currentColor" stroke-dasharray="251.2" stroke-dashoffset="12.5" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-headline font-bold text-xl text-tertiary">95%</div>
+</div>
+<span class="text-xs uppercase tracking-widest font-bold text-on-surface-variant">AI Confidence</span>
+</div>
+</div>
+<!-- High-Level Verdict Section -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 bg-error-container/20 rounded-lg p-8 border border-error/20 flex items-center justify-between relative overflow-hidden">
+<div class="relative z-10">
+<span class="text-tertiary font-bold tracking-[0.2em] uppercase text-sm mb-2 block">Primary Verdict</span>
+<h2 class="text-6xl font-headline font-black text-tertiary leading-none">THREAT CONFIRMED</h2>
+<p class="mt-4 text-on-error-container/80 max-w-md">
+                            Daggy AI has identified high-risk indicators of wire fraud and identity impersonation in the submitted documentation. Immediate intervention recommended.
+                        </p>
+</div>
+<span class="material-symbols-outlined text-[160px] text-error/5 absolute -right-10 -bottom-10" data-icon="warning">warning</span>
+</div>
+<div class="bg-surface-container rounded-lg p-8 flex flex-col justify-center">
+<div class="space-y-6">
+<div class="flex justify-between items-end">
+<span class="text-on-surface-variant text-sm">Security Pulse</span>
+<span class="flex items-center text-secondary text-xs font-bold uppercase tracking-widest">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse mr-2"></span>
+                                Monitoring
+                            </span>
+</div>
+<div class="h-2 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-full"></div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container-high rounded-lg">
+<div class="text-on-surface-variant text-xs mb-1">Response Time</div>
+<div class="text-on-surface font-headline font-bold">142ms</div>
+</div>
+<div class="p-4 bg-surface-container-high rounded-lg">
+<div class="text-on-surface-variant text-xs mb-1">Data Points</div>
+<div class="text-on-surface font-headline font-bold">4.8k</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Data Grid Section -->
+<section class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+<!-- Metadata Analysis -->
+<div class="xl:col-span-1 space-y-4">
+<h3 class="text-lg font-headline font-bold px-2 flex items-center">
+<span class="material-symbols-outlined mr-2 text-primary" data-icon="database">database</span>
+                        Metadata Analysis
+                    </h3>
+<div class="bg-surface-container-low rounded-lg overflow-hidden border border-outline-variant/10">
+<table class="w-full text-left text-sm">
+<tbody class="divide-y divide-outline-variant/5">
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-4 px-6 text-on-surface-variant">Origin IP</td>
+<td class="py-4 px-6 font-mono text-on-surface text-right">185.244.11.02</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-4 px-6 text-on-surface-variant">User Agent</td>
+<td class="py-4 px-6 text-on-surface text-right">Tor/8.5.1 (Masked)</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-4 px-6 text-on-surface-variant">Geolocation</td>
+<td class="py-4 px-6 text-on-surface text-right">Vilnius, LT (Mismatch)</td>
+</tr>
+<tr class="hover:bg-surface-container transition-colors">
+<td class="py-4 px-6 text-on-surface-variant">SSL Certificate</td>
+<td class="py-4 px-6 text-tertiary text-right font-bold">EXPIRED / CLONED</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Behavioral Patterns -->
+<div class="xl:col-span-1 space-y-4">
+<h3 class="text-lg font-headline font-bold px-2 flex items-center">
+<span class="material-symbols-outlined mr-2 text-primary" data-icon="psychology">psychology</span>
+                        Behavioral Patterns
+                    </h3>
+<div class="bg-surface-container-low rounded-lg p-6 border border-outline-variant/10 h-full flex flex-col justify-between">
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant text-sm">Urgency Score</span>
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full">
+<div class="w-4/5 h-full bg-tertiary rounded-full"></div>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant text-sm">Linguistic Mirroring</span>
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full">
+<div class="w-1/3 h-full bg-primary rounded-full"></div>
+</div>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant text-sm">Authority Simulation</span>
+<div class="w-24 h-1.5 bg-surface-container-highest rounded-full">
+<div class="w-5/6 h-full bg-tertiary rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="mt-6 p-3 bg-surface-container-highest/50 rounded-lg text-xs italic text-on-surface-variant">
+                            "High correlation with known 'Chief Executive Fraud' templates identified in EU sector Q3."
+                        </div>
+</div>
+</div>
+<!-- Blacklist Matches -->
+<div class="xl:col-span-1 space-y-4">
+<h3 class="text-lg font-headline font-bold px-2 flex items-center">
+<span class="material-symbols-outlined mr-2 text-primary" data-icon="list_alt">list_alt</span>
+                        Blacklist Matches
+                    </h3>
+<div class="space-y-3">
+<div class="bg-tertiary/10 p-4 rounded-lg flex items-center justify-between border-l-4 border-tertiary">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-tertiary mr-3" data-icon="verified_user">verified_user</span>
+<div>
+<div class="text-on-surface font-bold text-sm">Interpol Red Flag</div>
+<div class="text-on-surface-variant text-xs">Wallet Match: 0x4e2...881a</div>
+</div>
+</div>
+<span class="text-[10px] font-bold text-tertiary bg-tertiary/10 px-2 py-1 rounded">MATCHED</span>
+</div>
+<div class="bg-surface-container-low p-4 rounded-lg flex items-center justify-between">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-on-surface-variant mr-3" data-icon="account_balance">account_balance</span>
+<div>
+<div class="text-on-surface font-bold text-sm">SWIFT Sanctions List</div>
+<div class="text-on-surface-variant text-xs">No direct hits recorded</div>
+</div>
+</div>
+<span class="text-[10px] font-bold text-on-surface-variant bg-surface-container-high px-2 py-1 rounded">CLEAR</span>
+</div>
+<div class="bg-tertiary/10 p-4 rounded-lg flex items-center justify-between border-l-4 border-tertiary">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-tertiary mr-3" data-icon="alternate_email">alternate_email</span>
+<div>
+<div class="text-on-surface font-bold text-sm">Domain Reputation</div>
+<div class="text-on-surface-variant text-xs">Domain registered &lt; 24h ago</div>
+</div>
+</div>
+<span class="text-[10px] font-bold text-tertiary bg-tertiary/10 px-2 py-1 rounded">DANGER</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Evidence Section (Side-by-Side) -->
+<section class="space-y-4">
+<h3 class="text-xl font-headline font-bold px-2">Original Evidence Breakdown</h3>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-px bg-outline-variant/10 rounded-lg overflow-hidden">
+<!-- Original Message -->
+<div class="bg-surface-container-low p-8">
+<div class="flex items-center mb-4 text-on-surface-variant text-xs uppercase tracking-widest font-bold">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="mail">mail</span> Original Message Content
+                        </div>
+<div class="font-mono text-sm text-on-surface leading-relaxed whitespace-pre-wrap bg-surface-container-lowest p-6 rounded-lg">From: security@daggy-ai-support.net
+Subject: URGENT: Security Breach in your Vault
+
+Dear User, 
+
+We have detected suspicious activity on your Daggy AI Finance account. Your assets have been frozen for your protection. 
+
+To unfreeze your account and verify your identity, please transfer a symbolic amount of 0.05 BTC to the following recovery address: 0x882a...991c.
+
+Failure to do so within 1 hour will result in a permanent account lockout.
+
+Regards,
+Daggy Support Team</div>
+</div>
+<!-- AI Annotated -->
+<div class="bg-surface-container p-8">
+<div class="flex items-center mb-4 text-primary text-xs uppercase tracking-widest font-bold">
+<span class="material-symbols-outlined text-sm mr-2" data-icon="auto_awesome">auto_awesome</span> Daggy AI Breakdown
+                        </div>
+<div class="space-y-6">
+<div class="relative pl-6 border-l-2 border-tertiary">
+<span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-tertiary"></span>
+<div class="text-xs text-tertiary font-bold mb-1">DOMAIN SPOOFING</div>
+<p class="text-sm text-on-surface">The domain <span class="bg-tertiary/20 text-tertiary px-1 rounded">daggy-ai-support.net</span> is not an official Daggy AI domain. Official communications only come from @daggy.ai.</p>
+</div>
+<div class="relative pl-6 border-l-2 border-tertiary">
+<span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-tertiary"></span>
+<div class="text-xs text-tertiary font-bold mb-1">MALICIOUS CTA</div>
+<p class="text-sm text-on-surface">Asking for a "symbolic" crypto transfer to unfreeze an account is a 100% indicator of a recovery scam.</p>
+</div>
+<div class="relative pl-6 border-l-2 border-tertiary">
+<span class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-tertiary"></span>
+<div class="text-xs text-tertiary font-bold mb-1">ARTIFICIAL URGENCY</div>
+<p class="text-sm text-on-surface">The "1 hour" ultimatum is a psychological tactic designed to bypass critical thinking and force immediate action.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Admin/User Actions Toolbar -->
+<section class="flex flex-wrap items-center justify-between gap-6 pt-12 border-t border-outline-variant/10">
+<div class="flex items-center space-x-4">
+<button class="flex items-center space-x-2 px-6 py-3 bg-surface-container-high rounded-full hover:bg-surface-bright transition-colors text-on-surface font-bold text-sm">
+<span class="material-symbols-outlined text-primary" data-icon="picture_as_pdf">picture_as_pdf</span>
+<span>Export as PDF</span>
+</button>
+<button class="flex items-center space-x-2 px-6 py-3 bg-surface-container-high rounded-full hover:bg-surface-bright transition-colors text-on-surface font-bold text-sm">
+<span class="material-symbols-outlined text-primary" data-icon="forward_to_inbox">forward_to_inbox</span>
+<span>Forward to Authority</span>
+</button>
+</div>
+<button class="flex items-center space-x-2 px-8 py-3 bg-error-container text-on-error-container rounded-full font-headline font-bold hover:brightness-110 active:scale-95 transition-all shadow-lg shadow-error/10">
+<span class="material-symbols-outlined" data-icon="block" style="font-variation-settings: 'FILL' 1;">block</span>
+<span>Add to Global Blacklist</span>
+</button>
+</section>
+</div>
+<!-- Footer Visual (No Line Rule) -->
+<footer class="h-32 bg-surface-container-lowest flex items-center justify-center">
+<div class="text-center opacity-30 text-xs font-label uppercase tracking-[0.4em]">
+                Quantum-Resistant Audit Trail © 2024 Daggy AI Finance Guard
+            </div>
+</footer>
+</main>
+</body></html>
